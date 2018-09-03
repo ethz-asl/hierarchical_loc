@@ -1,0 +1,26 @@
+data:
+    name: 'nclt'
+    training_triplets: 'triplets_5seqs.npy'
+    #test_sequences: ['2012-01-08', '2012-08-20', '2013-02-23']
+    validation_size: 200
+    camera: 4
+    cache_in_memory: true
+model:
+    name: 'netvlad_triplets'
+    batch_size: 5
+    eval_batch_size: 10
+    intermediate_proj: 100
+    train_vlad: true
+    n_clusters: 32
+    learning_rate: 0.001
+    triplet_margin: 0.3
+    dimensionality_reduction: 40
+    proj_regularizer: 0
+    image_channels: 1
+    loss_squared: true
+    loss_in: true
+weights: 'delf_v1_20171026/model/variables/variables'
+train_iter: 100000
+validation_interval: 200
+#save_interval: 1000
+#keep_checkpoints: 10

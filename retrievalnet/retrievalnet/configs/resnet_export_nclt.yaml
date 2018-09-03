@@ -1,0 +1,11 @@
+data:
+    name: 'nclt'
+    test_sequences: ['2012-01-08', '2012-08-20', '2013-02-23']
+    camera: 4
+model:
+    name: 'delf'
+    use_attention: false
+    #normalize_feature_map: true
+    normalize_input: true
+    image_channels: 1
+weights: 'delf_v1_20171026/model/variables/variables'
