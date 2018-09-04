@@ -6,8 +6,8 @@ This repository contains the training and deployment code used in our paper *Lev
 <p align="center">
 	<a href="https://www.youtube.com/user/aslteam">
         <img src="doc/video_thumbnail.png" width="60%" style="opacity:0.5; border:1px solid black"/>
-    </a>
     <br /><em>The approach is described in details in our video (click to play).</em>
+</a>
 </p>
 
 ##
@@ -17,10 +17,10 @@ We introduce here two main features:
   - load any trained image retrieval model,
   - efficiently perform the inference on GPU or CPU,
   - index a given map and save it as a protobuf,
-  - and retrieve keyframes given a query image.
+  - and retrieve keyframes given a query image;
 - The training code: `retrievalnet`, a modular Python+Tensorflow package that allows to 
   - train the model on any target image domain,
-  - using the supervision of any existing teacher network;
+  - using the supervision of any existing teacher network.
 
 The modularity of our system allows to train a model and index a map on a powerful workstation while performing the retrieval on a mobile platform. Our code has thus been extensively tested on an NVIDIA Jetson TX2, widely used for robotics research.
 
@@ -92,7 +92,7 @@ An example of query is provided in [test_query_index.cc](https://github.com/ethz
 	--model_name mobilenetvlad_depth-0.35 \
 	--proto_name lindenhof_afternoon_aligned_mobilenet-d0.35.pb \
 	--query_mission f6837cac0168580aa8a66be7bbb20805 \
-	--use_pca --pca_dims 512
+	--use_pca --pca_dims 512 --max_num_queries 100
 ```
 
 Use the same indexes to evaluate and visualize the retrieval (generate the [Python protobuf interface](https://github.com/ethz-asl/hierarchical_loc/blob/master/notebooks/generate_proto_py.sh) and refer to tango_evaluation.ipynb and tango_visualize_retrieval.ipynb).
