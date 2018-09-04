@@ -95,7 +95,7 @@ An example of query is provided in [test_query_index.cc](https://github.com/ethz
 	--use_pca --pca_dims 512 --max_num_queries 100
 ```
 
-Use the same indexes to evaluate and visualize the retrieval (generate the [Python protobuf interface](https://github.com/ethz-asl/hierarchical_loc/blob/master/notebooks/generate_proto_py.sh) and refer to tango_evaluation.ipynb and tango_visualize_retrieval.ipynb).
+Use the same indexes to evaluate and visualize the retrieval: install [retrievalnet](https://github.com/ethz-asl/hierarchical_loc#training), generate the [Python protobuf interface](https://github.com/ethz-asl/hierarchical_loc/blob/master/notebooks/generate_proto_py.sh), and refer to tango_evaluation.ipynb and tango_visualize_retrieval.ipynb.
 
 ## Training
 
