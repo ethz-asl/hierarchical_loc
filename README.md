@@ -82,10 +82,10 @@ Given a VI map in `global-loc/maps/`, an index of global descriptors can be crea
 	--model_name mobilenetvlad_depth-0.35 \
 	--proto_name <index_name.pb>
 ```
-As an example, we provide the [Zurich map](https://github.com/ethz-asl/hierarchical_loc/releases/download/1.0/lindenhof_afternoon-wet_aligned.tar.gz) used in our paper. Several indexing options are available in [place-retrieval.cc](https://github.com/ethz-asl/hierarchical_loc/blob/master/global-loc/src/place-retrieval.cc), such as subsampling or mission selection.
+As an example, we provide the [Zurich map](https://github.com/ethz-asl/hierarchical_loc/releases/download/1.0/lindenhof_afternoon-wet_aligned.tar.gz) used in our paper. Several indexing options are available in [place-retrieval.cc](global-loc/src/place-retrieval.cc), such as subsampling or mission selection.
 
 ### Retrieval
-An example of query is provided in [test_query_index.cc](https://github.com/ethz-asl/hierarchical_loc/blob/master/global-loc/test/test_query_index.cc). Descriptor indexes for the Zurich dataset are included in `global-loc/data/` and can be used to time the queries:
+An example of query is provided in [test_query_index.cc](global-loc/test/test_query_index.cc). Descriptor indexes for the Zurich dataset are included in `global-loc/data/` and can be used to time the queries:
 ```bash
 ./devel/lib/global_loc/time_query \
 	--map_name <map_name> \
@@ -95,7 +95,7 @@ An example of query is provided in [test_query_index.cc](https://github.com/ethz
 	--use_pca --pca_dims 512 --max_num_queries 100
 ```
 
-Use the same indexes to evaluate and visualize the retrieval: install [retrievalnet](#training), generate the [Python protobuf interface](https://github.com/ethz-asl/hierarchical_loc/blob/master/notebooks/generate_proto_py.sh), and refer to [tango_evaluation.ipynb](https://nbviewer.jupyter.org/github/ethz-asl/hierarchical_loc/blob/master/notebooks/tango_evaluation.ipynb) and [tango_visualize_retrieval.ipynb](https://nbviewer.jupyter.org/github/ethz-asl/hierarchical_loc/blob/master/notebooks/tango_visualize_retrieval.ipynb).
+Use the same indexes to evaluate and visualize the retrieval: install [retrievalnet](#training), generate the [Python protobuf interface](notebooks/generate_proto_py.sh), and refer to [tango_evaluation.ipynb](https://nbviewer.jupyter.org/github/ethz-asl/hierarchical_loc/blob/master/notebooks/tango_evaluation.ipynb) and [tango_visualize_retrieval.ipynb](https://nbviewer.jupyter.org/github/ethz-asl/hierarchical_loc/blob/master/notebooks/tango_visualize_retrieval.ipynb).
 
 ## Training
 
@@ -114,7 +114,7 @@ cd retrievalnet && make install
 
 ### Exporting the target descriptors
 
-If you wish to train MobileNetVLAD on the Google Landmarks dataset as done in our paper, you first need to download [the index of images](https://github.com/ethz-asl/hierarchical_loc/releases/download/1.0/google_landmarks_index.csv) and then download the dataset itself with [download_google_landmarks.py](https://github.com/ethz-asl/hierarchical_loc/blob/master/retrievalnet/downloading/download_google_landmarks.py). The [weights of the original NetVLAD model](http://rpg.ifi.uzh.ch/datasets/netvlad/vd16_pitts30k_conv5_3_vlad_preL2_intra_white.zip) are provided by [netvlad_tf_open](https://github.com/uzh-rpg/netvlad_tf_open) and should be extracted in `$DATA_PATH/weights/`.
+If you wish to train MobileNetVLAD on the Google Landmarks dataset as done in our paper, you first need to download [the index of images](https://github.com/ethz-asl/hierarchical_loc/releases/download/1.0/google_landmarks_index.csv) and then download the dataset itself with [download_google_landmarks.py](retrievalnet/downloading/download_google_landmarks.py). The [weights of the original NetVLAD model](http://rpg.ifi.uzh.ch/datasets/netvlad/vd16_pitts30k_conv5_3_vlad_preL2_intra_white.zip) are provided by [netvlad_tf_open](https://github.com/uzh-rpg/netvlad_tf_open) and should be extracted in `$DATA_PATH/weights/`.
 
 Finally export the descriptors of Google Landmarks:
 ```
@@ -137,7 +137,7 @@ will export the model in `$EXPER_PATH/saved_models/mobilenetvlad/`.
 
 ### Evaluating on the NCLT dataset
 
-Download the [NCLT sequences](http://robots.engin.umich.edu/nclt/) in `$DATA_PATH/nclt/` along with the corresponding [pose files](https://github.com/ethz-asl/hierarchical_loc/releases/download/1.0/nclt_poses.zip) (generated with [nclt_generate_poses.ipynb](https://github.com/ethz-asl/hierarchical_loc/blob/master/notebooks/nclt_generate_poses.ipynb)). Export the NCLT descriptors, e.g. for MobileNetVLAD:
+Download the [NCLT sequences](http://robots.engin.umich.edu/nclt/) in `$DATA_PATH/nclt/` along with the corresponding [pose files](https://github.com/ethz-asl/hierarchical_loc/releases/download/1.0/nclt_poses.zip) (generated with [nclt_generate_poses.ipynb](notebooks/nclt_generate_poses.ipynb)). Export the NCLT descriptors, e.g. for MobileNetVLAD:
 ```bash
 python export_descriptors.py configs/mobilenetvlad_export_nclt.yaml mobilenetvlad
 ```
