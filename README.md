@@ -82,7 +82,7 @@ Given a VI map in `global-loc/maps/`, an index of global descriptors can be crea
 	--model_name mobilenetvlad_depth-0.35 \
 	--proto_name <index_name.pb>
 ```
-As an example, we provide the maps used in our paper for evaluation (Zurich dataset). Several indexing options are available in [place-retrieval.cc](https://github.com/ethz-asl/hierarchical_loc/blob/master/global-loc/src/place-retrieval.cc), such as subsampling or mission selection.
+As an example, we provide the [Zurich map](https://github.com/ethz-asl/hierarchical_loc/releases/download/1.0/lindenhof_afternoon-wet_aligned.tar.gz) used in our paper. Several indexing options are available in [place-retrieval.cc](https://github.com/ethz-asl/hierarchical_loc/blob/master/global-loc/src/place-retrieval.cc), such as subsampling or mission selection.
 
 ### Retrieval
 An example of query is provided in [test_query_index.cc](https://github.com/ethz-asl/hierarchical_loc/blob/master/global-loc/test/test_query_index.cc). Descriptor indexes for the Zurich dataset are included in `global-loc/data/` and can be used to time the queries:
