@@ -4,10 +4,10 @@ This repository contains the training and deployment code used in our paper *Lev
 *for Hierarchical Efficient Localization*. This work introduces **MobileNetVLAD**, a mobile-friendly image retrieval deep neural network that significantly improves the performance of classical 6-DoF visual localization through a hierarchical search.
 
 <p align="center">
-	<a href="https://www.youtube.com/user/aslteam" target="_blank">
+    <a href="https://www.youtube.com/user/aslteam" target="_blank">
         <img src="doc/video_thumbnail.png" width="60%" style="opacity:0.5; border:1px solid black"/>
-    <br /><em>The approach is described in details in our video (click to play).</em>
-</a>
+        <br /><em>The approach is described in details in our video (click to play).</em>
+    </a>
 </p>
 
 ##
@@ -25,7 +25,7 @@ We introduce here two main features:
 The modularity of our system allows to train a model and index a map on a powerful workstation while performing the retrieval on a mobile platform. Our code has thus been extensively tested on an NVIDIA Jetson TX2, widely used for robotics research.
 
 <p align="center">
-    <a href="https://github.com/ethz-asl/hierarchical_loc/blob/master/notebooks/tango_visualize_retrieval.ipynb">
+    <a href="https://nbviewer.jupyter.org/github/ethz-asl/hierarchical_loc/blob/master/notebooks/tango_visualize_retrieval.ipynb">
         <img src="doc/zurich_query_1.png" width="70%"/>
         <img src="doc/zurich_query_2.png" width="70%"/>
     </a>
@@ -95,7 +95,7 @@ An example of query is provided in [test_query_index.cc](https://github.com/ethz
 	--use_pca --pca_dims 512 --max_num_queries 100
 ```
 
-Use the same indexes to evaluate and visualize the retrieval: install [retrievalnet](https://github.com/ethz-asl/hierarchical_loc#training), generate the [Python protobuf interface](https://github.com/ethz-asl/hierarchical_loc/blob/master/notebooks/generate_proto_py.sh), and refer to tango_evaluation.ipynb and tango_visualize_retrieval.ipynb.
+Use the same indexes to evaluate and visualize the retrieval: install [retrievalnet](https://github.com/ethz-asl/hierarchical_loc#training), generate the [Python protobuf interface](https://github.com/ethz-asl/hierarchical_loc/blob/master/notebooks/generate_proto_py.sh), and refer to [tango_evaluation.ipynb](https://nbviewer.jupyter.org/github/ethz-asl/hierarchical_loc/blob/master/notebooks/tango_evaluation.ipynb) and [tango_visualize_retrieval.ipynb](https://nbviewer.jupyter.org/github/ethz-asl/hierarchical_loc/blob/master/notebooks/tango_visualize_retrieval.ipynb).
 
 ## Training
 
@@ -141,7 +141,7 @@ Download the [NCLT sequences](http://robots.engin.umich.edu/nclt/) in `$DATA_PAT
 ```bash
 python export_descriptors.py configs/mobilenetvlad_export_nclt.yaml mobilenetvlad
 ```
-These can be used to evaluate and visualize the retrieval (see nclt_evaluation.ipynb and nclt_visualize_retrieval.ipynb).
+These can be used to evaluate and visualize the retrieval (see [nclt_evaluation.ipynb](https://nbviewer.jupyter.org/github/ethz-asl/hierarchical_loc/blob/master/notebooks/nclt_evaluation.ipynb) and [nclt_visualize_retrieval.ipynb](https://nbviewer.jupyter.org/github/ethz-asl/hierarchical_loc/blob/master/notebooks/nclt_visualize_retrieval.ipynb)).
 
 ## Citation
 Please consider citing the corresponding publication if you use this work in an academic context:
