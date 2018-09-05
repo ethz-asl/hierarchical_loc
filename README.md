@@ -3,7 +3,7 @@
 This repository contains the training and deployment code used in our paper *[Leveraging Deep Visual Descriptors for Hierarchical Efficient Localization](https://arxiv.org/abs/1809.01019)*. This work introduces **MobileNetVLAD**, a mobile-friendly image retrieval deep neural network that significantly improves the performance of classical 6-DoF visual localization through a hierarchical search.
 
 <p align="center">
-    <a href="https://www.youtube.com/user/aslteam" target="_blank">
+    <a href="https://www.youtube.com/watch?v=8cg697oLUtg" target="_blank">
         <img src="doc/video_thumbnail.png" width="60%" style="opacity:0.5; border:1px solid black"/>
         <br /><em>The approach is described in details in our video (click to play).</em>
     </a>
