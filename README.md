@@ -145,7 +145,7 @@ These can be used to evaluate and visualize the retrieval (see [nclt_evaluation.
 ## Citation
 Please consider citing the corresponding publication if you use this work in an academic context:
 ```
-@article{hloc2018,
+@inproceedings{hloc2018,
   title={Leveraging Deep Visual Descriptors for Hierarchical Efficient Localization},
   author={Sarlin, P.-E. and Debraine, F. and Dymczyk, M. and Siegwart, R. and Cadena, C.},
   booktitle={Conference on Robot Learning (CoRL)},
