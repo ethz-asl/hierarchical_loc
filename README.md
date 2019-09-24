@@ -1,5 +1,7 @@
 # Hierarchical Localization
 
+:warning: :warning: **For a clean and research-friendly implementation of Hierarchical Localization, please refer to our CVPR 2019 paper at [ethz-asl/hfnet](https://github.com/ethz-asl/hfnet).** :warning: :warning:
+
 This repository contains the training and deployment code used in our paper *[Leveraging Deep Visual Descriptors for Hierarchical Efficient Localization](https://arxiv.org/abs/1809.01019)* presented at [CoRL 2018](http://www.robot-learning.org/). This work introduces **MobileNetVLAD**, a mobile-friendly image retrieval deep neural network that significantly improves the performance of classical 6-DoF visual localization through a hierarchical search.
 
 <p align="center">
