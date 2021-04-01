@@ -149,7 +149,7 @@ Please consider citing the corresponding publication if you use this work in an 
 ```
 @inproceedings{hloc2018,
   title={Leveraging Deep Visual Descriptors for Hierarchical Efficient Localization},
-  author={Sarlin, P.-E. and Debraine, F. and Dymczyk, M. and Siegwart, R. and Cadena, C.},
+  author={Sarlin, Paul-Edouard and Debraine, Frederic and Dymczyk, Marcin and Siegwart, Roland and Cadena, Cesar},
   booktitle={Conference on Robot Learning (CoRL)},
   year={2018}
 }
